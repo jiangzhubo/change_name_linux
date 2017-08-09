@@ -1,0 +1,9 @@
+import os
+name = os.listdir('./')
+name_xml = filter(lambda x : x.endswith('xml'),name)
+
+for x in name_xml:
+        print(x)
+        print('sed -i'+ ' \'s/Walking/walking/g\' '+ x)
+        os.system('sed -i'+ ' \'s/Walking/walking/g\' '+ x)
+
